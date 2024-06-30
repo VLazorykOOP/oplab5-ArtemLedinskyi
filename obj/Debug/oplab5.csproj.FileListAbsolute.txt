@@ -1,0 +1,12 @@
+C:\Users\Artem\source\repos\oplab5\bin\Debug\oplab5.exe.config
+C:\Users\Artem\source\repos\oplab5\bin\Debug\oplab5.exe
+C:\Users\Artem\source\repos\oplab5\bin\Debug\oplab5.pdb
+C:\Users\Artem\source\repos\oplab5\obj\Debug\oplab5.csproj.AssemblyReference.cache
+C:\Users\Artem\source\repos\oplab5\obj\Debug\oplab5.Form1.resources
+C:\Users\Artem\source\repos\oplab5\obj\Debug\oplab5.Properties.Resources.resources
+C:\Users\Artem\source\repos\oplab5\obj\Debug\oplab5.csproj.GenerateResource.cache
+C:\Users\Artem\source\repos\oplab5\obj\Debug\oplab5.csproj.CoreCompileInputs.cache
+C:\Users\Artem\source\repos\oplab5\obj\Debug\oplab5.exe
+C:\Users\Artem\source\repos\oplab5\obj\Debug\oplab5.pdb
+C:\Users\Artem\source\repos\oplab5\obj\Debug\oplab5.Task1.resources
+C:\Users\Artem\source\repos\oplab5\obj\Debug\oplab5.Task2.resources
