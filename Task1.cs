@@ -49,7 +49,26 @@ namespace oplab5
             }
 
         }
+    private PointF CalculateBezierPoint(float t, PointF P1, PointF P2, PointF P3, PointF P4)
+        {
+            float oneMinusT = 1 - t;
+            float tSquared = t * t;
+            float oneMinusTSquared = oneMinusT * oneMinusT;
+            float oneMinusTCubed = oneMinusTSquared * oneMinusT;
+            float tCubed = tSquared * t;
 
+            float x = oneMinusTCubed * P1.X;
+            x += 3 * oneMinusTSquared * t * P2.X;
+            x += 3 * oneMinusT * tSquared * P3.X;
+            x += tCubed * P4.X;
+
+            float y = oneMinusTCubed * P1.Y;
+            y += 3 * oneMinusTSquared * t * P2.Y;
+            y += 3 * oneMinusT * tSquared * P3.Y;
+            y += tCubed * P4.Y;
+
+            return new PointF(pictureBox1.Width / 2 + x, pictureBox1.Height / 2 - y);
+        }
         private void DrawBezier(Graphics g, PointF P1, PointF P2, PointF P3, PointF P4)
         {
             int steps = 100;
@@ -77,26 +96,7 @@ namespace oplab5
             g.DrawLines(Pens.Black, points);
         }
 
-        private PointF CalculateBezierPoint(float t, PointF P1, PointF P2, PointF P3, PointF P4)
-        {
-            float u = 1 - t;
-            float tt = t * t;
-            float uu = u * u;
-            float uuu = uu * u;
-            float ttt = tt * t;
-
-            float x = uuu * P1.X; // (1-t)^3 * P1
-            x += 3 * uu * t * P2.X; // 3(1-t)^2 * t * P2
-            x += 3 * u * tt * P3.X; // 3(1-t) * t^2 * P3
-            x += ttt * P4.X; // t^3 * P4
-
-            float y = uuu * P1.Y; // (1-t)^3 * P1
-            y += 3 * uu * t * P2.Y; // 3(1-t)^2 * t * P2
-            y += 3 * u * tt * P3.Y; // 3(1-t) * t^2 * P3
-            y += ttt * P4.Y; // t^3 * P4
-
-            return new PointF(pictureBox1.Width / 2 + x, pictureBox1.Height / 2 - y);
-        }
+        
         private void Task1_Load(object sender, EventArgs e)
         {
 
