@@ -60,7 +60,7 @@ namespace oplab5
             Point p1 = new Point(int.Parse(textBox1.Text), int.Parse(textBox2.Text));
             Point p2 = new Point(int.Parse(textBox3.Text), int.Parse(textBox4.Text));
             Point p3 = new Point(int.Parse(textBox5.Text), int.Parse(textBox6.Text));
-            var g = CreateGraphics();
+            Graphics g = CreateGraphics();
             g.Clear(Color.White);
             DrawKochFractal(g, p1, p2, p3, int.Parse(textBox7.Text));
             DrawKochFractal(g, p2, p3, p1, int.Parse(textBox7.Text));
